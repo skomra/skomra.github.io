@@ -1,0 +1,134 @@
+### Basic usage ###
+This page gives you a very basic outline of the git commands you will
+need to get the driver, hack and commit as well as to generate patches for
+submission. Treat this page as a quick reference only, it is strongly
+recommended that you peruse the links provided at the end of the page
+for a better understanding of git commands.
+
+### Getting the latest source ###
+<pre>
+  git clone git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/xf86-input-wacom
+</pre>
+
+This gets the latest upstream source and clones it into a ''xf86-input-wacom'' directory.
+If you already have a checked-out version, we recommend that you do a rebasing pull to update.
+<pre>
+  git pull --rebase
+  # if conflicts occur during rebase, resolve them and run
+  git add conflicting-file.c
+  git add other-conflicting-file.h
+  git rebase --continue
+</pre>
+If you have no local changes, you will only ever need the pull command.
+
+If you want to work on a branch other than the default ''master'' branch, use
+<pre>
+  git checkout -b branchname origin/branchname
+</pre>
+This will create a local branch ''branchname'' and set it up to track the origin's branch of the same name. Note that if you are working with branches, we really encourage you to get familiar with git first.
+
+## Hacking the code ##
+During hacking, the two commands you will most likely need are ''diff'' and ''checkout'':
+<pre>
+  git diff
+</pre?
+to show what has changed.
+
+If you want to reset the state to the last commit, run:
+<pre>
+  git checkout filename.c
+</pre>
+or (for all files)
+<pre>
+  git checkout -f
+</pre>
+Note that this throws all uncommitted changes away and you can't get them back again.
+
+## Committing ##
+Once you have changed the code to your liking, commit. The simplest way to do so is to commit everything with
+<pre>
+  git commit -as
+</pre?
+We recommend to commit early and often and reduce the content of a commit to a single ''logical'' change. It is better to err on the side of too many commits, git makes it quite easy to squash two commits together. Git allows partial commits of the code, i.e. if you have made several changes to the code you can commit some hunks only.
+<pre>
+  git add -p
+  # follow the prompt to add the matching hunks
+  git commit -s
+  # write a proper commit message
+</pre>
+Repeat the steps above until everything is committed. Note that if you do commit partially, ensure that each commit builds separately.
+All commits that you intend to submit must be singed off (see [[For-Developers:-Submitting-Patches]]).
+
+## Creating a patch for submission ##
+<pre>
+  git format-patch HEAD~1
+</pre>
+To create a patch from the very last commit. Or, if you have multiple commits, create a numbered patchset. Example for the last 7 commits:
+<pre>
+  git format-patch -n HEAD~7
+</pre>
+These patches are now ready for submission ([[For-Developers:-Submitting-Patches]]).
+
+
+## Recommended reading ##
+* http://who-t.blogspot.com/2009/12/on-commit-messages.html A guide to writing commit messages
+* http://www.kernel.org/pub/software/scm/git/docs/v1.2.6/tutorial.html An excellent introduction to git can be found 
+* http://www.freedesktop.org/wiki/Infrastructure/git/Developers freedesktop.org's git tutorial provides the same use-cases that apply to xf86-input-wacom development.
+
+# Advanced topics #
+The following are advanced topic for using git. Before attemping any of these, we recommend reading the [[recommended reading |For-Developers:-Using-Git#recommended-reading]] first and getting familiar with git. This section is more a quick reminder and an outline of how we handle things in the linuxwacom project than a real tutorial.
+
+## Using branches ##
+If you are working on a specific feature-set, we recommend the use of feature branches. This way, feature-specific patches are contained and easy to review. Plus, branches make it easier for the maintainer to pull a swath of patches into the main repository. To create a branch from the current HEAD, use
+<pre>
+  git checkout -b myfeature
+</pre>
+Note that your branch is currently identicial with your previous HEAD, it only starts diverging once you commit to it.
+
+Hack and commit as you would otherwise. You can create patches from the branch normally. The few differences you need to be aware of are when you rebase, pull or push.
+
+### Rebasing a branch ###
+When rebasing, you need to specify which branch you want to rebase onto:
+<pre>
+  git fetch origin
+  git rebase origin/master
+</pre>
+This simply reshuffles your ''myfeature''-branch patches on top of the current ''master'' branch in the ''origin'' remote. Rebasing is a good idea while your feature branch is still in development.
+
+### Pushing to a remote ###
+When pushing, you should '''always''' specify the branch, regardless which branch you are on. For our example here the right git push command is
+<pre>
+  git push origin myfeature
+</pre>
+Now anyone who clones, pulls or fetches from the remote will see your ''myfeature'' branch. If you have pushed your branch once and then rebase it (past the pushed sha's), you need to force-push to overwrite the remote again.
+<pre>
+  git push -f origin myfeature
+</pre>
+{{Warning|reason=Rebasing a pushed branch and force-pushing will cause error messages for all your branch users. Use with care.}}
+
+### Pulling two branches together ###
+Usually, you need to merge a local branch into your current checked out one.
+<pre>
+  git pull . branchname
+</pre>
+>Tip: Feature branches should usually be merged into master, not the other way round}}
+
+If you're merging someone else's branch, replace the . with the remote:
+<pre>
+  git pull git://someserver.org/path/to/repo.git branchname
+</pre>
+In both cases, git merges your currently checked out branch with the one specified and creates a merge commit.
+
+If you always rebase on top of the other branch, pulling in your feature branch into ''master'' is no different to applying all patches on top of master and you won't get that merge commit.
+
+When pulling a branch, the branch's sha1 will show up in your history. Since you now have the other branch but that branch doesn't have your history, you now need to get the other branch to pull from you if the other branch doesn't have any more patches since you pulled, git will simply rebase. Otherwise, you get another merge commit, etc.
+
+>Warning: Once a branch, you must not rebase that branch! That branch needs to now pull yours}}
+
+### Sending a pull request ###
+The git-request pull command creates a template email that you can send to someone else to request a pull from them.
+<pre>
+  git request-pull origin/master git://myserver.org/path/to/repo.git myfeature
+</pre>
+
+> Warning-Never rebase after a pull request! Wait until your branch is pulled, then pull from the other one before starting development.
