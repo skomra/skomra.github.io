@@ -1,1 +1,0 @@
-As of September 2017, bugs can be submitted at the project's associated ["Issues" page](https://github.com/linuxwacom/input-wacom/issues) or in the [legacy bugtracker](https://sourceforge.net/p/linuxwacom/bugs/).
