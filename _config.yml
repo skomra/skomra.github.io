@@ -9,7 +9,8 @@ name: Your Name
 description: Web Developer from Somewhere
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/penguin2.png
+#avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/penguin2.png
+avatar: https://skomra.github.io/images/penguin2.jpeg
 
 #
 # Flags below are optional
