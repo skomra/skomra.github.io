@@ -1,4 +1,17 @@
-
+<div id="home-search" class="home">
+<script>
+  (function() {
+    var cx = '008404540603468588056:bkuf6ocjbio';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 ## Welcome to GitHub Pages
 
