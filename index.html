@@ -3,15 +3,8 @@ layout: default
 ---
  
 <html>
-<header><title>Linuxwacom</title></header>
-table, th, td {
-    border: 1px solid grey;
-    border-spacing: 15px;
-}
-
-td {
-    padding: 0.5em 1.5em;
-}
+<header><title>Linuxwacom</title>
+</header>
 
 <body>
 
@@ -24,9 +17,9 @@ Many distributions come with our driver pre-installed. Oftentimes, you can simpl
 
 <table style="width:100%">
   <tr>
-    <th bgcolor="#4682b4">  width: 33%; border: solid gray; border-width: 1px 1px 0 1px" Kernel Driver </th>
+    <th bgcolor="#4682b4"> Kernel Driver </th>
     <th bgcolor="#6b8e23">  color: white; width: 33%; border: solid gray; border-width: 1px 1px 0 1px" X Driver </th>
-    <th bgcolor="#b22222">  color: white; width: 33%; border: solid gray; border-width: 1px 1px 0 1px" libwacom </th>
+    <th bgcolor="#b22222">libwacom </th>
   </tr>
   <tr>
     <td>
@@ -35,7 +28,6 @@ Many distributions come with our driver pre-installed. Oftentimes, you can simpl
 </td>
     <td>
 An X driver is responsible for translating kernel events into XInput events that can be used by applications such as GIMP. We provide an X driver that virtualizes the tablet into logical devices (e.g. stylus, eraser, touch) which report extended data like pressure and high-resolution coordinates.
-| style="border: solid gray; border-width: 0 1px; padding: 0.5em 1.5em" | 
 </td>
     <td>
 The '''libwacom''' library provides applications with a way to get information about any tablets that are currently connected. It may be used by control panels to better support devices and provide only relevant options or defaults for each.
@@ -47,10 +39,10 @@ The '''libwacom''' library provides applications with a way to get information a
 | style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install or update '''[[input-wacom]]''' if the system does not recognize your tablet and move the mouse pointer.''
 </td>
     <td>5
-| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install or update '''[[xf86-input-wacom]]''' if applications do not recognize the tablet and provide pressure-sensitivity.''
+''Install or update '''[[xf86-input-wacom]]''' if applications do not recognize the tablet and provide pressure-sensitivity.''
     </td>
     <td>
-| style="border: solid gray; border-width: 0 1px 1px 1px; padding: 0.5em 1.5em" |''Install or update '''[[libwacom]]''' if the control panel does not recognize your tablet and provide appropriate options.''
+''Install or update '''[[libwacom]]''' if the control panel does not recognize your tablet and provide appropriate options.''
     </td>
   </tr>
   <tr>
