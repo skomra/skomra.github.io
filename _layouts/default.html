@@ -19,6 +19,19 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
+          
+          <div class="grid" id="searchBar">
+            <div>
+              <div id="search">
+                 <form role="search" method="get" action="{{ site.baseurl }}//search/">
+                     <input id="searchString" name="searchString"
+                            placeholder="Learn Ionic, Be a Better Developer, etc." type="text">
+                  <input id="searchButton" name="googleSearchName" type="button" value="Search">
+                </form>
+              </div>
+            </div>
+          </div>
+          
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
           <div class="site-info">
@@ -29,6 +42,7 @@
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
+            
           </nav>
         </header>
       </div>
