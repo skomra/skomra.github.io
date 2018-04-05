@@ -329,20 +329,15 @@ footer {
     text-align: top;
     width: 90%;
     margin: 0 auto;
-    border-spacing: 1.5em 0;
-    font-size: 120%;
+    border-spacing: 1.5em 1.5em;
+    font-size: 100%;
 }
 
 .data_cell {
     border: solid gray;
     border-width: 0 1px;
-    padding: 0.5em 1.5em;
+    padding: 1.5em 1.5em;
 }
-
-td {
-    padding: 0.5em 1.5em;
-}
-
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
