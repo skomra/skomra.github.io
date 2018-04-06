@@ -325,11 +325,12 @@ footer {
 }
 
 .main_table {
+    border-collapse: separate;
+    border-spacing: 50px 0;
     vertical-align: top;
     text-align: top;
     width: 90%;
     margin: 0 auto;
-    border-spacing: 1.5em 1.5em;
     font-size: 100%;
 }
 
