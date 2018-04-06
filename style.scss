@@ -349,7 +349,8 @@ td {
 }
 
 p.one {
-    margin: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
