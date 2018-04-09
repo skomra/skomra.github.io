@@ -13,12 +13,49 @@
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 <body>
-<article class="page">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          
+          <div class="grid" id="searchBar">
+            <div>
+              <div id="search">
+                <form role="search" method="get" action="{{ site.baseurl }}/search/">
+                  <input id="searchString" name="searchString"
+                             placeholder="Search linuxwacom wikis" type="text">
+                  <input id="searchButton" name="googleSearchName" type="submit" value="Search">
+                </form>
+                <nav><a href="{{ site.baseurl }}/about">About</a> </nav>
+              </div>
+            </div>
+          </div>
+          
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-  <h1>{{ page.title }}</h1>
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div>
 
-  <div class="entry">
-    {{ content }}
-  </div>
-</article>
-</body>
+        </header>
+      </div>
+    </div>
+
+    <h1>{{ page.title }}</h1>
+
+    <div class="entry">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include svg-icons.html %}
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>
+
