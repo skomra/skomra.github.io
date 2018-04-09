@@ -340,8 +340,9 @@ footer {
     font-size: 100%;
 }
 
-th {
-    border-right: 5px solid red;
+th, td {
+    border-right: 1px solid red;
+    border-left: 1px solid red;
 }
 
 .outlined {
