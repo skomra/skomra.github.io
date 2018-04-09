@@ -338,6 +338,8 @@ footer {
     width: 90%;
     margin: 0 auto;
     font-size: 100%;
+    border: solid gray;
+    border-width: 1px 1px;
 }
 
 .outlined {
@@ -346,14 +348,10 @@ footer {
 }
 
 .row_two {
-    border: solid gray;
-    border-width: 1px 1px;
     padding: 10px 0;
 }
 
 .row_three {
-    border: solid gray;
-    border-width: 1px 1px 1px 1px;
     padding: 10px 0;
 }
 
