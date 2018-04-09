@@ -340,6 +340,10 @@ footer {
     font-size: 100%;
 }
 
+th, td {
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+}
 
 .outlined {
     border-left: 1px solid #000;
@@ -347,11 +351,9 @@ footer {
 }
 
 .row_two {
-    padding: 10px 0;
 }
 
 .row_three {
-    padding: 10px 0;
 }
 
 p.one {
