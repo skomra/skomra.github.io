@@ -10,7 +10,7 @@ The Linux Wacom Project was created in 2002 by John Joganic. The code was kept i
 
 Some (mainly enterprise) users need to run specific kernels or X server versions. For these, the Linux Wacom Project provides ongoing support for the linuxwacom tarballs and a newer tarball called input-wacom. Both of these package include kernel backports for certain kernel versions. Desktop distribution users usually do not need either tarball and should rely on their distribution packages instead. 
 
-Some more information is available on [Peter Hutterer's blog](http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html).
+Some more information about the history of the project is available on [Peter Hutterer's blog](http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html).
 
 Currently, members of the project include:
 
