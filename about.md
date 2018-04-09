@@ -6,15 +6,15 @@ permalink: /about/
 
 The linuxwacom project was started.... Currently, members of the project include:
 
-Ping Cheng, Wacom
-Peter Hutterer, Red Hat
-Jason Gerecke, Wacom
-Aaron Armstrong Skomra, Wacom
-and other community members.
+* Ping Cheng, Wacom
+* Peter Hutterer, Red Hat
+* Jason Gerecke, Wacom
+* Aaron Armstrong Skomra, Wacom
+* and other community members.
 
 ### Contact us
 
-The best way to contact the members of this project is to join and send a message to the relavent [mailing list](https://github.com/linuxwacom/input-wacom/wiki/Mailing-lists-and-Support).
+The best way to contact the members of this project is to join and send a message to the relevant  [mailing list](https://github.com/linuxwacom/input-wacom/wiki/Mailing-lists-and-Support).
 
 
 ### Penguin Image
