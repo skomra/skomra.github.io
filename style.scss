@@ -338,13 +338,14 @@ footer {
     width: 90%;
     margin: 0 auto;
     font-size: 100%;
+
+    th, td {
+        border-right: 1px solid grey;
+        border-left: 1px solid grey;
+        padding: 15px;
+    }
 }
 
-table.main_table th, td {
-    border-right: 1px solid grey;
-    border-left: 1px solid grey;
-    padding: 15px;
-}
 
 tr.border_bottom td {
     border-bottom:1px solid black;
