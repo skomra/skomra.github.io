@@ -4,15 +4,18 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+The linuxwacom project was started.... Currently, members of the project include:
 
-### More Information
+Ping Cheng, Wacom
+Peter Hutterer, Red Hat
+Jason Gerecke, Wacom
+Aaron Armstrong Skomra, Wacom
+and other community members.
 
-A place to include any other types of information that you'd like to include about yourself.
+### Contact us
 
-### Contact me
+The best way to contact the members of this project is to join and send a message to the relavent [mailing list](https://github.com/linuxwacom/input-wacom/wiki/Mailing-lists-and-Support).
 
-[email@domain.com](mailto:email@domain.com)
 
 ### Penguin Image
 
