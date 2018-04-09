@@ -10,7 +10,7 @@ The linuxwacom project was started.... Currently, members of the project include
 * Peter Hutterer, Red Hat
 * Jason Gerecke, Wacom
 * Aaron Armstrong Skomra, Wacom
-* and other community members.
+* and other community members like you.
 
 ### Contact us
 
