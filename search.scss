@@ -332,20 +332,22 @@ footer {
     width: 33%;
 }
 
- .main_table {
-     border-collapse: separate;
-     border-spacing: 35px 0px;
-     width: 90%;
-     margin: 0 auto;
-     font-size: 100%;
- }
+.main_table {
+    border-collapse: separate;
+    border-spacing: 35px 0px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 100%;
+}
  
+tr.border_bottom td {
+    border-bottom:1px solid black;
+}
  
- p.one {
-     margin-left: 100px;
-     margin-right: 100px;
- }
-
+p.one {
+    margin-left: 100px;
+    margin-right: 100px;
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
