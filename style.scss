@@ -351,11 +351,8 @@ th, td {
     border-right: 1px solid #000;
 }
 
-.row_two {
-}
-
-.row_three {
-    border-bottom: 1px solid grey;
+tr.border_bottom td {
+    border-bottom:1px solid black;
 }
 
 p.one {
